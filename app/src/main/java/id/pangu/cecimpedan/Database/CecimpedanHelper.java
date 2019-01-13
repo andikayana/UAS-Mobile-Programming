@@ -61,37 +61,4 @@ public class CecimpedanHelper {
         initialValues.put(ARTI, item.getArti());
         return database.insert(TABLE_CECIMPEDAN, null, initialValues);
     }
-
-    public void beginTransaction() {
-        database.beginTransaction();
-    }
-
-    public void setTransactionSuccess() {
-        database.setTransactionSuccessful();
-    }
-
-    public void endTransaction() {
-        database.endTransaction();
-    }
-
-    public void insertTransaction(CecimpedanItem item) {
-        String sql = "INSERT INTO " + TABLE_CECIMPEDAN + " (" + CECIMPEDAN + ", " + ARTI
-                + ") VALUES (?, ?)";
-        SQLiteStatement stmt = database.compileStatement(sql);
-        stmt.bindString(1, item.getCecimpedan());
-        stmt.bindString(2, item.getArti());
-        stmt.execute();
-        stmt.clearBindings();
-    }
-
-    public int update(CecimpedanItem item) {
-        ContentValues args = new ContentValues();
-        args.put(CECIMPEDAN, item.getCecimpedan());
-        args.put(ARTI, item.getArti());
-        return database.update(TABLE_CECIMPEDAN, args, _ID + "= '" + item.getId() + "'", null);
-    }
-
-    public int delete(int id){
-        return database.delete(TABLE_CECIMPEDAN, _ID + " = '"+id+"'", null);
-    }
 }

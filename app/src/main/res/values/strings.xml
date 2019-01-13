@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Cecimpedan</string>
     <string name="first_run">first_run</string>
+    <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="about">About</string>
 </resources>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ProgressBar;
 
 import java.io.BufferedReader;
@@ -63,6 +64,7 @@ public class PreLoadActivity extends Activity {
                         this.wait(2000);
                     }
                 } catch (Exception e) {
+                    Log.d(TAG, "doInBackground: " + e);
                 }
             }
 
