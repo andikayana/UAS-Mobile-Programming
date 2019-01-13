@@ -5,15 +5,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteStatement;
 
 import java.util.ArrayList;
 
 import id.pangu.cecimpedan.Model.CecimpedanItem;
+
 import static android.provider.BaseColumns._ID;
-import static id.pangu.cecimpedan.Database.DatabaseContarct.TABLE_CECIMPEDAN;
-import static id.pangu.cecimpedan.Database.DatabaseContarct.CecimpedanColumns.CECIMPEDAN;
 import static id.pangu.cecimpedan.Database.DatabaseContarct.CecimpedanColumns.ARTI;
+import static id.pangu.cecimpedan.Database.DatabaseContarct.CecimpedanColumns.CECIMPEDAN;
+import static id.pangu.cecimpedan.Database.DatabaseContarct.TABLE_CECIMPEDAN;
 
 public class CecimpedanHelper {
 
